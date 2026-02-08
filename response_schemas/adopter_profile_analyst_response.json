@@ -1,0 +1,112 @@
+{
+  "agent_name": "Adopter Profile Analyst",
+  "agent_id": "6987f74fe5513e27d5435bc6",
+  "agent_purpose": "sub-agent",
+  "description": "Evaluates prospective adopter's lifestyle factors including activity level, work schedule, living space, experience with pets, family composition, and commitment capacity",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "lifestyle_assessment": {
+        "activity_level": "string",
+        "time_availability": "string",
+        "stability": "string"
+      },
+      "environment_assessment": {
+        "space_adequacy": "string",
+        "outdoor_access": "string",
+        "housing_restrictions": "string"
+      },
+      "experience_level": {
+        "previous_pets": "string",
+        "knowledge_score": "string",
+        "training_capability": "string"
+      },
+      "commitment_factors": {
+        "time_commitment": "string",
+        "financial_readiness": "string",
+        "long_term_stability": "string"
+      },
+      "ideal_pet_characteristics": {
+        "energy_level": "string",
+        "size_preference": "string",
+        "care_complexity": "string"
+      }
+    },
+    "metadata": {
+      "analysis_timestamp": "string",
+      "confidence_score": "number"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "lifestyle_assessment": {
+        "activity_level": "Moderately active with good exercise capacity. Score: 7/10. Suitable for pets requiring regular but not excessive physical activity.",
+        "time_availability": "2-3 hours daily dedicated to pet care with remote work 4 days/week providing excellent flexibility and presence. Work schedule allows for midday check-ins and companionship.",
+        "stability": "High stability with established remote work routine and minimal travel (2-3 times yearly). Predictable schedule creates consistent environment for pet."
+      },
+      "environment_assessment": {
+        "space_adequacy": "1200 sq ft apartment provides adequate space for small to medium-sized pets. Layout suitable for indoor pet activities and comfortable living arrangements.",
+        "outdoor_access": "Small balcony available for limited outdoor exposure. Will require regular walks to nearby parks or outdoor areas for exercise and enrichment.",
+        "housing_restrictions": "Apartment living may have breed, size, or species restrictions. Verification of pet policies and potential deposit requirements needed."
+      },
+      "experience_level": {
+        "previous_pets": "Previous dog ownership 5 years ago demonstrates foundational understanding of pet care responsibilities and daily routines.",
+        "knowledge_score": "6/10 - Intermediate level with practical experience but may need refresher on current best practices and training methods.",
+        "training_capability": "Moderate capability for basic obedience and behavioral management. May benefit from professional support for complex behavioral issues or specialized training needs."
+      },
+      "commitment_factors": {
+        "time_commitment": "Strong daily availability with 2-3 hours dedicated time plus remote work presence 80% of week. Schedule supports consistent feeding, exercise, and companionship routines.",
+        "financial_readiness": "Remote work stability suggests steady income. Should confirm budget for routine care ($100-200/monthly), emergency veterinary costs ($1000-5000), and pet insurance considerations.",
+        "long_term_stability": "Good indicators for long-term commitment with stable work arrangement and established lifestyle. Infrequent travel pattern manageable with planning. Single household provides consistent primary caregiver."
+      },
+      "ideal_pet_characteristics": {
+        "energy_level": "Moderate energy level pet best suited. Can accommodate daily walks and play sessions but not high-intensity working breeds requiring 3+ hours of vigorous activity.",
+        "size_preference": "Small to medium-sized pets (under 40-50 lbs) most appropriate for apartment living and balcony space constraints.",
+        "care_complexity": "Low to moderate maintenance pets recommended. Can handle regular grooming, training, and healthcare needs but may find high-needs or specialized medical care challenging as single caregiver."
+      }
+    },
+    "metadata": {
+      "analysis_timestamp": "2025-01-15T10:30:00Z",
+      "confidence_score": 0.85
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T02:44:20.377719",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "lifestyle_assessment": {
+        "activity_level": "Moderately active with good exercise capacity. Score: 7/10. Suitable for pets requiring regular but not excessive physical activity.",
+        "time_availability": "2-3 hours daily dedicated to pet care with remote work 4 days/week providing excellent flexibility and presence. Work schedule allows for midday check-ins and companionship.",
+        "stability": "High stability with established remote work routine and minimal travel (2-3 times yearly). Predictable schedule creates consistent environment for pet."
+      },
+      "environment_assessment": {
+        "space_adequacy": "1200 sq ft apartment provides adequate space for small to medium-sized pets. Layout suitable for indoor pet activities and comfortable living arrangements.",
+        "outdoor_access": "Small balcony available for limited outdoor exposure. Will require regular walks to nearby parks or outdoor areas for exercise and enrichment.",
+        "housing_restrictions": "Apartment living may have breed, size, or species restrictions. Verification of pet policies and potential deposit requirements needed."
+      },
+      "experience_level": {
+        "previous_pets": "Previous dog ownership 5 years ago demonstrates foundational understanding of pet care responsibilities and daily routines.",
+        "knowledge_score": "6/10 - Intermediate level with practical experience but may need refresher on current best practices and training methods.",
+        "training_capability": "Moderate capability for basic obedience and behavioral management. May benefit from professional support for complex behavioral issues or specialized training needs."
+      },
+      "commitment_factors": {
+        "time_commitment": "Strong daily availability with 2-3 hours dedicated time plus remote work presence 80% of week. Schedule supports consistent feeding, exercise, and companionship routines.",
+        "financial_readiness": "Remote work stability suggests steady income. Should confirm budget for routine care ($100-200/monthly), emergency veterinary costs ($1000-5000), and pet insurance considerations.",
+        "long_term_stability": "Good indicators for long-term commitment with stable work arrangement and established lifestyle. Infrequent travel pattern manageable with planning. Single household provides consistent primary caregiver."
+      },
+      "ideal_pet_characteristics": {
+        "energy_level": "Moderate energy level pet best suited. Can accommodate daily walks and play sessions but not high-intensity working breeds requiring 3+ hours of vigorous activity.",
+        "size_preference": "Small to medium-sized pets (under 40-50 lbs) most appropriate for apartment living and balcony space constraints.",
+        "care_complexity": "Low to moderate maintenance pets recommended. Can handle regular grooming, training, and healthcare needs but may find high-needs or specialized medical care challenging as single caregiver."
+      }
+    },
+    "metadata": {
+      "analysis_timestamp": "2025-01-15T10:30:00Z",
+      "confidence_score": 0.85
+    }
+  },
+  "test_passed": true
+}

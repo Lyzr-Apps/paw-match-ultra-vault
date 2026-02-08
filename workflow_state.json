@@ -1,0 +1,97 @@
+{
+  "workflow_name": "Adoption Compatibility Matching System",
+  "pattern": "Manager-Subagent",
+  "created_at": "2026-02-08T00:00:00Z",
+  "agents": [
+    {
+      "agent_id": "6987f79df8f483cee28b9a5e",
+      "name": "Match Coordinator",
+      "type": "manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "description": "Orchestrates compatibility assessment by routing adopter data to sub-agents and synthesizing their analyses into ranked match recommendations with compatibility explanations",
+      "managed_agents": [
+        "6987f74fe5513e27d5435bc6",
+        "6987f77866ea18a43a069b09"
+      ]
+    },
+    {
+      "agent_id": "6987f74fe5513e27d5435bc6",
+      "name": "Adopter Profile Analyst",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5",
+      "temperature": 0.4,
+      "top_p": 1,
+      "description": "Evaluates prospective adopter's lifestyle factors including activity level, work schedule, living space, experience with pets, family composition, and commitment capacity"
+    },
+    {
+      "agent_id": "6987f77866ea18a43a069b09",
+      "name": "Animal Compatibility Agent",
+      "type": "sub-agent",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "description": "Analyzes animal behavioral profiles against adopter characteristics, assessing energy match, space requirements, socialization needs, medical care demands, and training requirements"
+    }
+  ],
+  "workflow_visualization": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "Adopter Assessment Data",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "match_coordinator",
+        "type": "Agent",
+        "label": "Match Coordinator",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "adopter_profile_analyst",
+        "type": "Agent",
+        "label": "Adopter Profile Analyst",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "animal_compatibility_agent",
+        "type": "Agent",
+        "label": "Animal Compatibility Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Match Recommendations",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "match_coordinator"
+      },
+      {
+        "source": "match_coordinator",
+        "target": "adopter_profile_analyst"
+      },
+      {
+        "source": "match_coordinator",
+        "target": "animal_compatibility_agent"
+      },
+      {
+        "source": "adopter_profile_analyst",
+        "target": "output_node"
+      },
+      {
+        "source": "animal_compatibility_agent",
+        "target": "output_node"
+      }
+    ]
+  }
+}

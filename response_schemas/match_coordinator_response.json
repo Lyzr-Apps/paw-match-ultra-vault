@@ -1,0 +1,408 @@
+{
+  "agent_name": "Match Coordinator",
+  "agent_id": "6987f79df8f483cee28b9a5e",
+  "agent_purpose": "manager",
+  "description": "Orchestrates compatibility assessment by routing adopter data to sub-agents and synthesizing their analyses into ranked match recommendations with compatibility explanations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "assessment_summary": {
+        "adopter_profile_summary": "string",
+        "animals_evaluated": "number",
+        "timestamp": "string"
+      },
+      "match_recommendations": [
+        {
+          "animal_id": "string",
+          "animal_name": "string",
+          "compatibility_score": "number",
+          "match_rank": "number",
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": "number",
+              "explanation": "string"
+            },
+            "space_match": {
+              "score": "number",
+              "explanation": "string"
+            },
+            "experience_match": {
+              "score": "number",
+              "explanation": "string"
+            },
+            "schedule_match": {
+              "score": "number",
+              "explanation": "string"
+            },
+            "family_match": {
+              "score": "number",
+              "explanation": "string"
+            },
+            "medical_match": {
+              "score": "number",
+              "explanation": "string"
+            }
+          },
+          "strengths": [
+            "string"
+          ],
+          "considerations": [
+            "string"
+          ],
+          "recommendation_summary": "string"
+        }
+      ],
+      "overall_insights": {
+        "best_match_explanation": "string",
+        "adopter_strengths": [
+          "string"
+        ],
+        "important_considerations": [
+          "string"
+        ],
+        "next_steps": [
+          "string"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "sub_agents_consulted": [
+        "string"
+      ]
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "assessment_summary": {
+        "adopter_profile_summary": "Single adult in a 1200 sq ft apartment with a small balcony. Works from home 4 days a week, can dedicate 2-3 hrs/day to pet care, is moderately active, enjoys weekend hiking, and has prior dog ownership experience (5+ years ago). Looking to adopt either a dog or cat.",
+        "animals_evaluated": 3,
+        "timestamp": "2024-06-12T20:30:00Z"
+      },
+      "match_recommendations": [
+        {
+          "animal_id": "Bella_SeniorCat_7y",
+          "animal_name": "Bella",
+          "compatibility_score": 92,
+          "match_rank": 1,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 95,
+              "explanation": "Adopter's moderate lifestyle and calm home perfectly align with Bella's low energy, senior needs. Ample quiet time and personal attention expected."
+            },
+            "space_match": {
+              "score": 98,
+              "explanation": "Bella's space and mobility needs are minimal and well suited to the apartment."
+            },
+            "experience_match": {
+              "score": 90,
+              "explanation": "No specialized cat experience needed; adopter's general pet experience transfers well."
+            },
+            "schedule_match": {
+              "score": 92,
+              "explanation": "Work-from-home schedule allows constant companionship and close monitoring of medical needs."
+            },
+            "family_match": {
+              "score": 100,
+              "explanation": "Single-adult, quiet household is Bella's ideal environment. No children or pets to disturb her."
+            },
+            "medical_match": {
+              "score": 75,
+              "explanation": "Adopter's reliable schedule and stability make medical management feasible, but ongoing arthritis care will need long-term commitment and financial readiness."
+            }
+          },
+          "strengths": [
+            "Very calm, quiet environment",
+            "Low stress for senior cat",
+            "Schedule allows attentive caregiving"
+          ],
+          "considerations": [
+            "Needs willingness for ongoing arthritis medication and veterinary care"
+          ],
+          "recommendation_summary": "Bella is an excellent match for this adopter's home, lifestyle, and caregiving capacity. Primary consideration is the adopter's readiness for the additional medical management required for senior pets."
+        },
+        {
+          "animal_id": "Charlie_Beagle_2y",
+          "animal_name": "Charlie",
+          "compatibility_score": 82,
+          "match_rank": 2,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 85,
+              "explanation": "Charlie's moderate exercise needs fit the adopter's availability for multiple daily walks and play, with bonus enrichment from weekend hikes."
+            },
+            "space_match": {
+              "score": 75,
+              "explanation": "Apartment is sufficient but not optimal; extra outdoor walks/play needed since apartment lacks a yard."
+            },
+            "experience_match": {
+              "score": 88,
+              "explanation": "Adopter's prior dog ownership provides a strong foundation for the structured training and consistency Charlie requires."
+            },
+            "schedule_match": {
+              "score": 85,
+              "explanation": "Flexible work-from-home schedule aligns with Charlie's need for human presence and interaction."
+            },
+            "family_match": {
+              "score": 95,
+              "explanation": "Charlie is social and does well with adult-only environments. No children or other pets makes training easier."
+            },
+            "medical_match": {
+              "score": 100,
+              "explanation": "Charlie is currently healthy and requires only standard care."
+            }
+          },
+          "strengths": [
+            "Active adopter can provide needed walks and hikes",
+            "Prior dog ownership is a plus for training consistency",
+            "Healthy young dog with no major medical issues"
+          ],
+          "considerations": [
+            "Beagle vocalization may be a challenge in apartment setting",
+            "Training on barking and recall is essential",
+            "No yard: must meet exercise needs through regular outings"
+          ],
+          "recommendation_summary": "Charlie is a strong fit if the adopter is ready for consistent training (especially barking control) and is committed to providing daily outdoor exercise."
+        },
+        {
+          "animal_id": "Max_LabradorMix_3y",
+          "animal_name": "Max",
+          "compatibility_score": 68,
+          "match_rank": 3,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 60,
+              "explanation": "Max's very high exercise needs exceed the adopter's moderate activity; risk of under-stimulation."
+            },
+            "space_match": {
+              "score": 70,
+              "explanation": "Apartment and small balcony not ideal for a large, high-energy dog; heavy reliance on off-site exercise."
+            },
+            "experience_match": {
+              "score": 80,
+              "explanation": "Adopter has some dog experience, but Max's needs would stretch their current lifestyle and may require more advanced training."
+            },
+            "schedule_match": {
+              "score": 75,
+              "explanation": "Time at home is a plus, but fulfilling Max's daily multi-hour active needs would be hard long-term."
+            },
+            "family_match": {
+              "score": 90,
+              "explanation": "Only household member means focused attention, but Max may prefer busier, more active home."
+            },
+            "medical_match": {
+              "score": 100,
+              "explanation": "Healthy with no special needs; only routine care required."
+            }
+          },
+          "strengths": [
+            "Friendly and social dog fits a single household",
+            "Adopter has experience"
+          ],
+          "considerations": [
+            "May develop boredom or stress without extensive daily activity",
+            "Apartment may limit quality of life without robust exercise routine"
+          ],
+          "recommendation_summary": "Max is not ideal given the adopter's space and activity level, unless the adopter can consistently meet very high exercise and stimulation requirements."
+        }
+      ],
+      "overall_insights": {
+        "best_match_explanation": "Bella is the top match due to the perfect alignment with adopter's schedule, living situation, and need for a calm, attentive home. The main caveat is commitment to her medical needs. Charlie is a good match if the adopter prioritizes structured training and is diligent about daily walks and vocalization management. Max, though friendly, is not recommended given the high risk of under-exercise and space limitations.",
+        "adopter_strengths": [
+          "Realistic time commitment and experience",
+          "Stable, quiet home ideal for both dogs and cats",
+          "Excellent schedule for daily pet care and attention"
+        ],
+        "important_considerations": [
+          "Ensure willingness for senior cat medical care if choosing Bella",
+          "Beagle vocalization and training require dedication if adopting Charlie",
+          "Max's needs may exceed available energy and space, making him a poor fit for apartment living"
+        ],
+        "next_steps": [
+          "Arrange a meet-and-greet with Bella and Charlie to assess personal connection",
+          "Consider future medical budgeting for Bella",
+          "Seek advice on apartment pet policies and noise before adopting Charlie"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Match Coordinator",
+      "timestamp": "2024-06-12T20:30:00Z",
+      "sub_agents_consulted": [
+        "Adopter Profile Analyst",
+        "Animal Compatibility Agent"
+      ]
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T02:42:42.313844",
+  "test_message_used": "Process this request and coordinate sub-agents",
+  "raw_test_response": "To begin the compatibility assessment, I need adopter assessment data (such as lifestyle, preferences, experience) and profiles for available animals. Please provide these details so I can coordinate the analysis and generate match recommendations.",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "assessment_summary": {
+        "adopter_profile_summary": "Single adult in a 1200 sq ft apartment with a small balcony. Works from home 4 days a week, can dedicate 2-3 hrs/day to pet care, is moderately active, enjoys weekend hiking, and has prior dog ownership experience (5+ years ago). Looking to adopt either a dog or cat.",
+        "animals_evaluated": 3,
+        "timestamp": "2024-06-12T20:30:00Z"
+      },
+      "match_recommendations": [
+        {
+          "animal_id": "Bella_SeniorCat_7y",
+          "animal_name": "Bella",
+          "compatibility_score": 92,
+          "match_rank": 1,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 95,
+              "explanation": "Adopter's moderate lifestyle and calm home perfectly align with Bella's low energy, senior needs. Ample quiet time and personal attention expected."
+            },
+            "space_match": {
+              "score": 98,
+              "explanation": "Bella's space and mobility needs are minimal and well suited to the apartment."
+            },
+            "experience_match": {
+              "score": 90,
+              "explanation": "No specialized cat experience needed; adopter's general pet experience transfers well."
+            },
+            "schedule_match": {
+              "score": 92,
+              "explanation": "Work-from-home schedule allows constant companionship and close monitoring of medical needs."
+            },
+            "family_match": {
+              "score": 100,
+              "explanation": "Single-adult, quiet household is Bella's ideal environment. No children or pets to disturb her."
+            },
+            "medical_match": {
+              "score": 75,
+              "explanation": "Adopter's reliable schedule and stability make medical management feasible, but ongoing arthritis care will need long-term commitment and financial readiness."
+            }
+          },
+          "strengths": [
+            "Very calm, quiet environment",
+            "Low stress for senior cat",
+            "Schedule allows attentive caregiving"
+          ],
+          "considerations": [
+            "Needs willingness for ongoing arthritis medication and veterinary care"
+          ],
+          "recommendation_summary": "Bella is an excellent match for this adopter's home, lifestyle, and caregiving capacity. Primary consideration is the adopter's readiness for the additional medical management required for senior pets."
+        },
+        {
+          "animal_id": "Charlie_Beagle_2y",
+          "animal_name": "Charlie",
+          "compatibility_score": 82,
+          "match_rank": 2,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 85,
+              "explanation": "Charlie's moderate exercise needs fit the adopter's availability for multiple daily walks and play, with bonus enrichment from weekend hikes."
+            },
+            "space_match": {
+              "score": 75,
+              "explanation": "Apartment is sufficient but not optimal; extra outdoor walks/play needed since apartment lacks a yard."
+            },
+            "experience_match": {
+              "score": 88,
+              "explanation": "Adopter's prior dog ownership provides a strong foundation for the structured training and consistency Charlie requires."
+            },
+            "schedule_match": {
+              "score": 85,
+              "explanation": "Flexible work-from-home schedule aligns with Charlie's need for human presence and interaction."
+            },
+            "family_match": {
+              "score": 95,
+              "explanation": "Charlie is social and does well with adult-only environments. No children or other pets makes training easier."
+            },
+            "medical_match": {
+              "score": 100,
+              "explanation": "Charlie is currently healthy and requires only standard care."
+            }
+          },
+          "strengths": [
+            "Active adopter can provide needed walks and hikes",
+            "Prior dog ownership is a plus for training consistency",
+            "Healthy young dog with no major medical issues"
+          ],
+          "considerations": [
+            "Beagle vocalization may be a challenge in apartment setting",
+            "Training on barking and recall is essential",
+            "No yard: must meet exercise needs through regular outings"
+          ],
+          "recommendation_summary": "Charlie is a strong fit if the adopter is ready for consistent training (especially barking control) and is committed to providing daily outdoor exercise."
+        },
+        {
+          "animal_id": "Max_LabradorMix_3y",
+          "animal_name": "Max",
+          "compatibility_score": 68,
+          "match_rank": 3,
+          "compatibility_breakdown": {
+            "energy_match": {
+              "score": 60,
+              "explanation": "Max's very high exercise needs exceed the adopter's moderate activity; risk of under-stimulation."
+            },
+            "space_match": {
+              "score": 70,
+              "explanation": "Apartment and small balcony not ideal for a large, high-energy dog; heavy reliance on off-site exercise."
+            },
+            "experience_match": {
+              "score": 80,
+              "explanation": "Adopter has some dog experience, but Max's needs would stretch their current lifestyle and may require more advanced training."
+            },
+            "schedule_match": {
+              "score": 75,
+              "explanation": "Time at home is a plus, but fulfilling Max's daily multi-hour active needs would be hard long-term."
+            },
+            "family_match": {
+              "score": 90,
+              "explanation": "Only household member means focused attention, but Max may prefer busier, more active home."
+            },
+            "medical_match": {
+              "score": 100,
+              "explanation": "Healthy with no special needs; only routine care required."
+            }
+          },
+          "strengths": [
+            "Friendly and social dog fits a single household",
+            "Adopter has experience"
+          ],
+          "considerations": [
+            "May develop boredom or stress without extensive daily activity",
+            "Apartment may limit quality of life without robust exercise routine"
+          ],
+          "recommendation_summary": "Max is not ideal given the adopter's space and activity level, unless the adopter can consistently meet very high exercise and stimulation requirements."
+        }
+      ],
+      "overall_insights": {
+        "best_match_explanation": "Bella is the top match due to the perfect alignment with adopter's schedule, living situation, and need for a calm, attentive home. The main caveat is commitment to her medical needs. Charlie is a good match if the adopter prioritizes structured training and is diligent about daily walks and vocalization management. Max, though friendly, is not recommended given the high risk of under-exercise and space limitations.",
+        "adopter_strengths": [
+          "Realistic time commitment and experience",
+          "Stable, quiet home ideal for both dogs and cats",
+          "Excellent schedule for daily pet care and attention"
+        ],
+        "important_considerations": [
+          "Ensure willingness for senior cat medical care if choosing Bella",
+          "Beagle vocalization and training require dedication if adopting Charlie",
+          "Max's needs may exceed available energy and space, making him a poor fit for apartment living"
+        ],
+        "next_steps": [
+          "Arrange a meet-and-greet with Bella and Charlie to assess personal connection",
+          "Consider future medical budgeting for Bella",
+          "Seek advice on apartment pet policies and noise before adopting Charlie"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Match Coordinator",
+      "timestamp": "2024-06-12T20:30:00Z",
+      "sub_agents_consulted": [
+        "Adopter Profile Analyst",
+        "Animal Compatibility Agent"
+      ]
+    }
+  },
+  "test_passed": true
+}

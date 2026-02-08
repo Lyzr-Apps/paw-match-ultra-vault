@@ -1,0 +1,276 @@
+{
+  "agent_name": "Animal Compatibility Agent",
+  "agent_id": "6987f77866ea18a43a069b09",
+  "agent_purpose": "sub-agent",
+  "description": "Analyzes animal behavioral profiles against adopter characteristics, assessing energy match, space requirements, socialization needs, medical care demands, and training requirements",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "energy_assessment": {
+        "level": "string",
+        "exercise_needs": "string",
+        "play_requirements": "string",
+        "details": "string"
+      },
+      "space_assessment": {
+        "minimum_space": "string",
+        "outdoor_required": "boolean",
+        "mobility_needs": "string",
+        "details": "string"
+      },
+      "socialization_assessment": {
+        "people_comfort": "string",
+        "child_friendly": "boolean",
+        "pet_friendly": "boolean",
+        "social_behaviors": [
+          "string"
+        ],
+        "details": "string"
+      },
+      "medical_assessment": {
+        "health_status": "string",
+        "medication_required": "boolean",
+        "vet_frequency": "string",
+        "special_care": [
+          "any"
+        ],
+        "details": "string"
+      },
+      "training_assessment": {
+        "current_level": "string",
+        "behavioral_challenges": [
+          "string"
+        ],
+        "training_needs": [
+          "string"
+        ],
+        "experience_required": "string",
+        "details": "string"
+      },
+      "temperament_profile": {
+        "personality_traits": [
+          "string"
+        ],
+        "stress_triggers": [
+          "string"
+        ],
+        "ideal_environment": "string",
+        "behavioral_notes": "string"
+      },
+      "compatibility_factors": {
+        "ideal_adopter_profile": {
+          "activity_level": "string",
+          "experience_needed": "string",
+          "space_type": [
+            "string"
+          ],
+          "household_requirements": [
+            "string"
+          ]
+        },
+        "red_flags": [
+          "string"
+        ],
+        "success_factors": [
+          "string"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "energy_assessment": {
+        "level": "high",
+        "exercise_needs": "extensive",
+        "play_requirements": "Max requires daily vigorous activity, such as running, hiking, or long sessions of active play/fetch.",
+        "details": "A high-energy Labrador mix, Max thrives with at least 60-90 minutes of vigorous exercise every day. Insufficient activity may lead to restlessness or undesired behaviors."
+      },
+      "space_assessment": {
+        "minimum_space": "large",
+        "outdoor_required": true,
+        "mobility_needs": "Needs a home with access to a secure, spacious yard and room to move freely.",
+        "details": "Max will benefit most from a house with a fenced yard; apartments or small spaces may not provide enough room for healthy outlets."
+      },
+      "socialization_assessment": {
+        "people_comfort": "high",
+        "child_friendly": true,
+        "pet_friendly": true,
+        "social_behaviors": [
+          "friendly with people",
+          "enjoys play with other dogs",
+          "seeks regular social interaction"
+        ],
+        "details": "Outgoing and sociable, Max quickly bonds with humans and other dogs. Positive, regular engagement is important for his well-being."
+      },
+      "medical_assessment": {
+        "health_status": "healthy",
+        "medication_required": false,
+        "vet_frequency": "routine",
+        "special_care": [],
+        "details": "No known health or special medical requirements; standard preventative care and routine checkups recommended."
+      },
+      "training_assessment": {
+        "current_level": "basic",
+        "behavioral_challenges": [
+          "pulls on leash"
+        ],
+        "training_needs": [
+          "improved leash manners",
+          "reinforcement of basic commands",
+          "advanced obedience"
+        ],
+        "experience_required": "beginner",
+        "details": "Max knows basic commands but needs ongoing training for leash control and more complex instructions. Positive reinforcement methods are suggested."
+      },
+      "temperament_profile": {
+        "personality_traits": [
+          "outgoing",
+          "playful",
+          "social",
+          "intelligent",
+          "eager to please"
+        ],
+        "stress_triggers": [
+          "boredom from lack of activity",
+          "isolation",
+          "lack of social interaction"
+        ],
+        "ideal_environment": "Active household with plenty of space and people or other pets for companionship.",
+        "behavioral_notes": "Max is best suited to homes where he will not be left alone for long periods and can participate in family activities."
+      },
+      "compatibility_factors": {
+        "ideal_adopter_profile": {
+          "activity_level": "high",
+          "experience_needed": "beginner",
+          "space_type": [
+            "house"
+          ],
+          "household_requirements": [
+            "active lifestyle",
+            "access to secure yard",
+            "willingness to provide daily vigorous exercise",
+            "time for continued training and social interaction"
+          ]
+        },
+        "red_flags": [
+          "sedentary households",
+          "no yard or outdoor space",
+          "prospective adopters unable to commit to daily exercise requirements"
+        ],
+        "success_factors": [
+          "active family",
+          "regular outdoor activities",
+          "interest in training",
+          "opportunities for socialization with people and dogs"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Animal Compatibility Agent",
+      "timestamp": "2024-06-12T19:09:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-08T02:43:14.920492",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "energy_assessment": {
+        "level": "high",
+        "exercise_needs": "extensive",
+        "play_requirements": "Max requires daily vigorous activity, such as running, hiking, or long sessions of active play/fetch.",
+        "details": "A high-energy Labrador mix, Max thrives with at least 60-90 minutes of vigorous exercise every day. Insufficient activity may lead to restlessness or undesired behaviors."
+      },
+      "space_assessment": {
+        "minimum_space": "large",
+        "outdoor_required": true,
+        "mobility_needs": "Needs a home with access to a secure, spacious yard and room to move freely.",
+        "details": "Max will benefit most from a house with a fenced yard; apartments or small spaces may not provide enough room for healthy outlets."
+      },
+      "socialization_assessment": {
+        "people_comfort": "high",
+        "child_friendly": true,
+        "pet_friendly": true,
+        "social_behaviors": [
+          "friendly with people",
+          "enjoys play with other dogs",
+          "seeks regular social interaction"
+        ],
+        "details": "Outgoing and sociable, Max quickly bonds with humans and other dogs. Positive, regular engagement is important for his well-being."
+      },
+      "medical_assessment": {
+        "health_status": "healthy",
+        "medication_required": false,
+        "vet_frequency": "routine",
+        "special_care": [],
+        "details": "No known health or special medical requirements; standard preventative care and routine checkups recommended."
+      },
+      "training_assessment": {
+        "current_level": "basic",
+        "behavioral_challenges": [
+          "pulls on leash"
+        ],
+        "training_needs": [
+          "improved leash manners",
+          "reinforcement of basic commands",
+          "advanced obedience"
+        ],
+        "experience_required": "beginner",
+        "details": "Max knows basic commands but needs ongoing training for leash control and more complex instructions. Positive reinforcement methods are suggested."
+      },
+      "temperament_profile": {
+        "personality_traits": [
+          "outgoing",
+          "playful",
+          "social",
+          "intelligent",
+          "eager to please"
+        ],
+        "stress_triggers": [
+          "boredom from lack of activity",
+          "isolation",
+          "lack of social interaction"
+        ],
+        "ideal_environment": "Active household with plenty of space and people or other pets for companionship.",
+        "behavioral_notes": "Max is best suited to homes where he will not be left alone for long periods and can participate in family activities."
+      },
+      "compatibility_factors": {
+        "ideal_adopter_profile": {
+          "activity_level": "high",
+          "experience_needed": "beginner",
+          "space_type": [
+            "house"
+          ],
+          "household_requirements": [
+            "active lifestyle",
+            "access to secure yard",
+            "willingness to provide daily vigorous exercise",
+            "time for continued training and social interaction"
+          ]
+        },
+        "red_flags": [
+          "sedentary households",
+          "no yard or outdoor space",
+          "prospective adopters unable to commit to daily exercise requirements"
+        ],
+        "success_factors": [
+          "active family",
+          "regular outdoor activities",
+          "interest in training",
+          "opportunities for socialization with people and dogs"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Animal Compatibility Agent",
+      "timestamp": "2024-06-12T19:09:00Z"
+    }
+  },
+  "test_passed": true
+}
