@@ -13,7 +13,7 @@ import {
   Loader2,
   ChevronRight,
   ChevronLeft,
-  Home,
+  Home as HomeIcon,
   Heart,
   Plus,
   X,
